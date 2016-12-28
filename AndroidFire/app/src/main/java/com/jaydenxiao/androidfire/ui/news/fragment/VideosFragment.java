@@ -102,7 +102,8 @@ public class VideosFragment extends BaseFragment<VideoListPresenter, VideosListM
         if(videoListAdapter.getSize()<=0) {
             //发起请求
             mStartPage=0;
-            mPresenter.getVideosListDataRequest(mVideoType, mStartPage);
+//            mPresenter.getVideosListDataRequest(mVideoType, mStartPage);
+            mPresenter.getVideoListDatasRequest(mVideoType, mStartPage);
         }
     }
     @Override
@@ -151,7 +152,8 @@ public class VideosFragment extends BaseFragment<VideoListPresenter, VideosListM
         videoListAdapter.getPageBean().setRefresh(false);
         //发起请求
         irc.setLoadMoreStatus(LoadMoreFooterView.Status.LOADING);
-        mPresenter.getVideosListDataRequest(mVideoType, mStartPage);
+//        mPresenter.getVideosListDataRequest(mVideoType, mStartPage);
+        mPresenter.getVideoListDatasRequest(mVideoType, mStartPage);
     }
 
     @Override
